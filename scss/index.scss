@@ -1,0 +1,230 @@
+@import './blocks';
+@import './fonts';
+@import './global';
+@import './reset';
+@import './vars';
+
+.welcome {
+  padding-top: 160px;
+  &__title {
+    @extend .main-title;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    &-title {
+      @extend .H2-text;
+      margin-bottom: 20px;
+    }
+    &-description {
+      @extend .simple-text;
+      margin-bottom: 15px;
+    }
+    &-right {
+      width: 700px;
+    }
+  }
+}
+
+.about {
+  padding-top: 100px;
+  &__wrapper {
+    display: flex;
+  }
+  &__title {
+    @extend .main-title;
+  }
+  &__content-description {
+    @extend .simple-text;
+    margin-bottom: 45px;
+  }
+  &__content {
+    width: 700px;
+    margin-right: 140px;
+    margin-top: 40px;
+  }
+  &__quotes {
+  }
+  &__quotes-item {
+    margin-top: 40px;
+    background-color: #fff;
+    position: relative;
+    &--red-border {
+      border-left: 2px solid $bright-color;
+    }
+    &--blue-border {
+      border-left: 2px solid #aab6ff;
+    }
+    &--green-border {
+      border-left: 2px solid #6be4d5;
+    }
+    &::before {
+      content: '';
+      background-image: url('../icons/CombinedShape.png');
+      background-repeat: no-repeat;
+      height: 20px;
+      width: 23px;
+      position: absolute;
+      left: 25px;
+      top: 15px;
+    }
+  }
+  &__quotes-description {
+    padding: 30px 60px 20px 60px;
+    @extend .italic-text;
+  }
+
+  &__bottom-content {
+    margin: 40px 0px;
+    @extend .simple-text;
+    &-header {
+      @extend .H2-text;
+      margin-bottom: 20px;
+    }
+    &-title {
+      display: flex;
+    }
+    &-title-letter {
+      @extend .capital-letter;
+      padding-right: 7px;
+    }
+  }
+  &__color-info {
+    &-title {
+      @extend .H2-text;
+      margin-bottom: 20px;
+    }
+    &-list-item {
+      @extend .simple-text;
+      margin-bottom: 15px;
+      padding-left: 25px;
+      align-items: center;
+      position: relative;
+      &::before {
+        content: '';
+        background-image: url('../icons/a-icon-checklist.png');
+        background-repeat: no-repeat;
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        left: 0;
+        top: 10px;
+      }
+    }
+  }
+
+  &__aside {
+    margin-top: 35px;
+    width: 580px;
+    &-title {
+      @extend .H2-text;
+      margin-bottom: 27px;
+    }
+    &-gallery {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &-gallery-item {
+      padding: 10px;
+      border: 1px solid #cec7c7;
+      box-sizing: border-box;
+      margin-right: 50px;
+      margin-bottom: 50px;
+      &:nth-child(3n) {
+        margin-right: 0px;
+      }
+    }
+
+    &-link-title {
+      @extend .H2-text;
+      margin-bottom: 20px;
+    }
+    &-link-list {
+      width: 220px;
+    }
+    &-link {
+      @extend .simple-text;
+      padding: 10px 0px 10px 30px;
+      margin-bottom: 15px;
+      border-bottom: 1px dashed #cec7c7;
+      position: relative;
+      &:hover {
+        color: $bright-hover-color;
+        cursor: pointer;
+      }
+      &::before {
+        content: '';
+        background-image: url('../icons/a-icon-arrowlink.png');
+        background-repeat: no-repeat;
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        left: 0;
+        top: 15px;
+      }
+    }
+  }
+}
+
+.contact {
+  padding-top: 80px;
+  padding-bottom: 60px;
+  &__wrapper {
+    display: flex;
+  }
+  &__form {
+    margin-right: 60px;
+  }
+  &__title {
+    @extend .main-title;
+    margin-bottom: 40px;
+  }
+  &__form-title {
+    @extend .H2-text;
+    margin-bottom: 40px;
+  }
+  &__information {
+    @extend .simple-text;
+    &-title {
+      @extend .H2-text;
+    }
+    &-description {
+      margin-top: 22px;
+      margin-bottom: 40px;
+    }
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    &-email {
+      padding: 0px 16px;
+      &-item {
+        color: $bright-color;
+      }
+      &-item:hover {
+        color: $bright-hover-color;
+        cursor: pointer;
+      }
+    }
+    &-phone {
+      padding: 0px 16px;
+      &-item:hover {
+        color: $bright-hover-color;
+        cursor: pointer;
+      }
+    }
+    &-name {
+      padding: 0px 16px;
+      &:hover {
+        color: $bright-hover-color;
+        cursor: pointer;
+      }
+      &:not(:last-child) {
+        border-right: 2px solid #cec7c7;
+      }
+    }
+  }
+}
